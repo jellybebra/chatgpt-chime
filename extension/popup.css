@@ -1,0 +1,30 @@
+:root { color-scheme: light dark; font-family: 'Segoe UI', system-ui, sans-serif; color: #20332c; background: #f5f8f5; }
+* { box-sizing: border-box; }
+body { width: 330px; margin: 0; padding: 24px; }
+.toggle-row { display: flex; justify-content: space-between; align-items: center; font-size: 14px; font-weight: 600; cursor: pointer; }
+small { display: block; font-size: 11px; font-weight: 400; color: #718076; margin-top: 5px; }
+input[type=checkbox] { appearance: none; flex-shrink: 0; width: 36px; height: 22px; border-radius: 20px; background: #b1bcb4; cursor: pointer; position: relative; transition: background .15s; }
+input[type=checkbox]::after { content: ''; position: absolute; width: 16px; height: 16px; left: 3px; top: 3px; background: white; border-radius: 50%; transition: transform .15s; }
+input[type=checkbox]:checked { background: #28834f; }
+input[type=checkbox]:checked::after { transform: translateX(14px); }
+.volume-heading { display: flex; justify-content: space-between; align-items: center; margin: 27px 0 12px; font-size: 13px; }
+output { color: #28724a; background: #e1ede4; padding: 3px 8px; border-radius: 6px; font-size: 12px; font-variant-numeric: tabular-nums; }
+input[type=range] { width: 100%; margin: 0; accent-color: #28834f; cursor: pointer; }
+button { width: 100%; margin-top: 24px; padding: 11px 12px; background: #233b2f; color: white; border: 0; border-radius: 10px; font: 600 12px 'Segoe UI', sans-serif; cursor: pointer; }
+button:hover { background: #31543f; }
+button:disabled { opacity: .65; cursor: wait; }
+button span { padding-right: 7px; font-size: 10px; }
+:focus-visible { outline: 3px solid #69ac80; outline-offset: 4px; }
+.status { font-size: 10px; color: #718076; text-align: center; line-height: 1.5; margin: 10px 0 0; }
+footer { border-top: 1px solid #dbe4dc; margin-top: 24px; padding-top: 18px; }
+footer .toggle-row { gap: 12px; font-size: 11px; font-weight: 400; line-height: 1.5; }
+footer small { font-size: 10px; margin-top: 4px; }
+.dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #3b82f6; margin-right: 5px; }
+@media (prefers-color-scheme: dark) {
+  :root { background: #18221d; color: #e2eae5; }
+  small, .status { color: #a0b2a6; }
+  output { background: #294836; color: #b5e2c3; }
+  button { background: #bce8ca; color: #213629; }
+  button:hover { background: #d3f5dd; }
+  footer { border-color: #34463a; }
+}

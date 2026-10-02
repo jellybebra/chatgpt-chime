@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ChatGPT Chime</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <main>
+    <label class="toggle-row" for="enabled"><span>Completion sound<small>Play when a reply finishes</small></span><input id="enabled" type="checkbox" role="switch" checked></label>
+    <div class="volume-heading"><label for="volume">Volume</label><output id="level" for="volume">60%</output></div>
+    <input id="volume" type="range" min="0" max="100" step="1" value="60" aria-valuetext="60 percent">
+    <button id="preview" type="button"><span aria-hidden="true">▶</span> Preview sound</button>
+    <p class="status" id="status" role="status" hidden></p>
+  </main>
+  <footer><label class="toggle-row" for="tabIndicator"><span><span class="dot" aria-hidden="true"></span>Blue dot on the tab icon when finished.<small>Clears when you return to the tab.</small></span><input id="tabIndicator" type="checkbox" role="switch" aria-label="Blue dot on tab" checked></label></footer>
+  <script src="popup.js"></script>
+</body></html>
