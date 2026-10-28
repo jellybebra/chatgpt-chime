@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
   "name": "ChatGPT Chime",
-  "version": "1.0.5",
+  "version": "1.0.6",
+  "homepage_url": "https://github.com/jellybebra/chatgpt-chime",
   "description": "A completion chime and blue dot on the ChatGPT tab icon, with adjustable volume.",
   "minimum_chrome_version": "116",
   "permissions": ["storage", "offscreen"],
