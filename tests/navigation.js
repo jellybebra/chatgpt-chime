@@ -13,7 +13,7 @@ async (page) => {
   await page.context().route('**/*', r => r.fulfill({contentType:'text/html',body:fixture}));
   await page.goto('https://chatgpt.com/c/first');
   await page.waitForTimeout(300);
-  assert(await page.evaluate(() => document.documentElement.dataset.chatgptChimeVersion)==='1.0.5', 'Updated detector loaded');
+  assert(await page.evaluate(() => document.documentElement.dataset.chatgptChimeVersion)==='1.0.6', 'Updated detector loaded');
   async function loadHistory(path, text) {
     await page.evaluate(path => {
       if (path) history.pushState({},'',path);

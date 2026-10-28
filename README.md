@@ -28,6 +28,8 @@ Detection depends on ChatGPT's page markup. Major interface changes or special t
 
 ## Privacy and permissions
 
+Read the [Privacy Policy](PRIVACY.md) and [Terms of Use](TERMS.md). These links and [support](https://github.com/jellybebra/chatgpt-chime/issues) are also available from the extension popup.
+
 `storage` saves volume and switch preferences locally. `offscreen` plays the bundled WAV, including for background tabs. Content scripts run only on `chatgpt.com` and the legacy `chat.openai.com` domain.
 
 The latest assistant text is compared in memory to detect changes; it is never transmitted or saved. The extension loads the site's favicon to draw the dot. There are no account credentials, analytics, or external services.
@@ -46,6 +48,10 @@ npx --yes --package @playwright/cli@0.1.22 playwright-cli -s=chime run-code --fi
 Navigation checks cover history loading, navigation during generation, sending, regeneration, and new-conversation URL assignment. Focus checks cover the dot's color, background completion, Chrome activation events, favicon restoration, and returning during the completion delay.
 
 Audio playback uses Chrome's [offscreen API](https://developer.chrome.com/docs/extensions/reference/api/offscreen).
+
+## Store package
+
+Run `python3 scripts/package.py /path/to/chatgpt-chime-1.0.6.zip` to produce a ZIP with `manifest.json` at its root and only runtime files. Store listing text, permission explanations, and reviewer instructions are in [store/LISTING.md](store/LISTING.md). Store publication is subject to review; a GitHub release alone does not mean the extension is listed in the Chrome Web Store.
 
 ## Attribution
 
